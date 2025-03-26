@@ -9,7 +9,7 @@ class FilmesController extends Controller
 {
     public function Primeiro()
     {
-        $filme = FilmesModelsModel::first();
+        $filme = FilmesModel::first();
         return response()->json($filme);
     }
     public function Ultimo()
@@ -17,5 +17,4 @@ class FilmesController extends Controller
         $filme = FilmesModel::latest()->first();
         return response()->json($filme);
     }
-
 }
