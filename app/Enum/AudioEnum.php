@@ -5,6 +5,8 @@ namespace App\Enum;
 enum AudioEnum
 {
     // Nacional
-    
+    case NACIONA
+    case LEGENDADO
+    case 
 
 }
