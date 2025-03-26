@@ -4,6 +4,10 @@ namespace App;
 
 enum AudioEnum
 {
-    // case Nacional, Legendado, Dublado, Desconhecido
-    
+    // Nacional, Legendado, Dublado, Desconhecido
+    case Nacional;
+    case Legendado;
+    case Dublado;
+    case Desconhecido;
+
 }
