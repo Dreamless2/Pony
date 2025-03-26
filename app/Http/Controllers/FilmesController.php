@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enum\AudioEnum;
 use App\Models\FilmesModel;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
@@ -24,7 +25,7 @@ class FilmesController extends Controller
         $request->validate([
             'codigo' => 'required|numeric',
             'titulo' => 'required|string',
-            'audio' => ['required', new Enum(Audio::class)],
+            'audio' => ['required', new Enum(AudioEnum::class)],
             'sinopse' => 'required|string',
             'titulo_original' => 'required|string',
             'data_lancamento' => 'required|string',
