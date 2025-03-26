@@ -4,10 +4,9 @@ namespace App\Enum;
 
 enum AudioEnum
 {
-    // Nacional
     case NACIONAL = 'Nacional';
-    case LEGENDADO
-    case DUBLADO
-    case DESCONHECIDO
+    case LEGENDADO = 'Legendado';
+    case DUBLADO = 'Dublado';
+    case DESCONHECIDO = 'Desconhecido';
 
 }
