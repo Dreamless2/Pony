@@ -2,7 +2,7 @@
 
 namespace App\Enum;
 
-enum AudioEnum
+enum AudioEnum: string
 {
     case NACIONAL = 'Nacional';
     case LEGENDADO = 'Legendado';
