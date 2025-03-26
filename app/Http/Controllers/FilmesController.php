@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\AudioEnum;
 use App\Models\FilmesModel;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Enum;
 
 class FilmesController extends Controller
 {
