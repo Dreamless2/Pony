@@ -15,7 +15,7 @@ class BlockRootAccess
      */
     public function handle(Request $request, Closure $next): Response
     {
-          if ($request->is('/')) {
+          if ($request->path() === '/') {
             return response('Você não tem permissão para acessar esta rota.', 403);
         }
         return $next($request);
