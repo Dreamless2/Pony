@@ -18,7 +18,7 @@ class HandleNotFound
     {
         try {
             return $next($request);
-        } catch (NotFoundHttpExceptiontion $e) {
+        } catch (NotFoundHttpException $e) {
             return response('Página não encontrada.', 404)
                    ->header('Content-Type', 'text/plain');
         }
