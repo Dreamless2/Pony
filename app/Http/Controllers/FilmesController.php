@@ -24,7 +24,7 @@ class FilmesController extends Controller
         $request->validate([
             'codigo' => 'required|numeric',
             'titulo' => 'required|string',
-            'audio' => ['required', new Enum(EnumAudioEnumEnum::class)],
+            'audio' => ['required', new Enum(Audio::class)],
             'sinopse' => 'required|string',
             'titulo_original' => 'required|string',
             'data_lancamento' => 'required|string',
