@@ -20,7 +20,7 @@ class HandleNotFound
             return $next($request);
         } catch (NotFoundHttpException $e) {
             return response('Página não encontrada.', 404)
-                   ->header('Content-Type', 'text/plain');
+                ->header('Content-Type', 'text/plain');
         }
     }
 }
