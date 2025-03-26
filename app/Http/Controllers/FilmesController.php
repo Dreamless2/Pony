@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AudioEnum;
 use App\Models\FilmesModel;
 use Illuminate\Http\Request;
 
