@@ -15,6 +15,11 @@ class HandleNotFound
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+        try {
+            return $next($request);
+        } catch (NotFoundHttpException $e) {
+            return response('Página não encontrada.', 404)
+                   ->header('Content-Type', 'text/plain');
+        }
     }
 }
