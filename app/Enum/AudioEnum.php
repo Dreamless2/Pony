@@ -8,5 +8,4 @@ enum AudioEnum: string
     case LEGENDADO = 'Legendado';
     case DUBLADO = 'Dublado';
     case DESCONHECIDO = 'Desconhecido';
-
 }
