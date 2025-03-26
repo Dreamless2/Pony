@@ -7,6 +7,7 @@ enum AudioEnum
     // Nacional
     case NACIONA
     case LEGENDADO
-    case 
+    case DUBLADO
+    case DESCONHECIDO
 
 }
