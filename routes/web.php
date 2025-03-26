@@ -2,4 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [FilmesController::class, 'FilmesController@Primeiro']);
+Route::get('/', 'FilmesController@Primeiro']);
+
+Route::get('/ultimo', 'FilmesController@Ultimo');
