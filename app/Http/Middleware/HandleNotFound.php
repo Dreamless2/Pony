@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class HandleNotFound
 {
@@ -17,7 +18,7 @@ class HandleNotFound
     {
         try {
             return $next($request);
-        } catch (NotFoundHttpException $e) {
+        } catch (NotFoundHttpExceptiontion $e) {
             return response('Página não encontrada.', 404)
                    ->header('Content-Type', 'text/plain');
         }
