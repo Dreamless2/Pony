@@ -5,4 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/primeiro', [FilmesController::class, 'Primeiro'])->name('primeiro');
 Route::get('/ultimo',  [FilmesController::class, 'Ultimo'])->name('ultimo');
-Route::post('/inserirnovo', [FilmesController::class, 'store']);
+Route::post('/inserir', [FilmesController::class, 'store']);
