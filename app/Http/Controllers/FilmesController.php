@@ -23,7 +23,7 @@ class FilmesController extends Controller
         $tmdb->setLang("pt-BR");
         $tmdb->setTimeZone("America/Sao_Paulo");
 
-        $idMovie = 11;
+        $idMovie = 550;
 
         try {
             $filme = $tmdb->getMovie($idMovie); // Retorna um objeto do tipo Movie
