@@ -15,7 +15,7 @@ class FilmesController extends Controller
         return view('Filmes.index');
     }
 
-    public function create()
+    public function ObterFilme()
     {
         $tmdb = new TMDB();
         $tmdb->setAPIKey('');
