@@ -41,7 +41,7 @@ class FilmesController extends Controller
             'mcu' => 'string'
         ]);
 
-        $item = FilmesModel::create([
+        $item = FilmesModel::create($request->onl[
             'codigo' => $request->codigo,
             'titulo' => $request->titulo,
             'audio' => $request->audio,
@@ -62,6 +62,6 @@ class FilmesController extends Controller
         return response()->json([
             'message' => 'Filme cadastrado com sucesso!',
             'data' => $item
-        ], 201); 
+        ], 201);
     }
 }
