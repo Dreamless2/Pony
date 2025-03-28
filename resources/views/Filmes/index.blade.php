@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Título</label>
-                        <input type="text" class="form-control" placeholder="Título" {{ $filme->titulo }}>
+                        <input type="text" class="form-control" placeholder="Título" {{ $filme['titulo }}>
                     </div>
                 </div>
 
