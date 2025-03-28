@@ -21,7 +21,7 @@ class FilmesController extends Controller
         $filme = FilmesModel::latest()->first();
         return response()->json($filme);
     }
-    public function InserirNovo(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'codigo' => 'required|numeric',
