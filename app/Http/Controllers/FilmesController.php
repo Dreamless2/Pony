@@ -27,7 +27,7 @@ class FilmesController extends Controller
             'audio' => ['required', new Enum(AudioEnum::class)],
             'sinopse' => 'required|string',
             'titulo_original' => 'required|string',
-            'data_lancamento' => 'required|string',
+            'data_lancamento' => 'required|date_format:d/m/Y',
             'titulo_alternativo' => 'nullable|string',
             'filme' => 'required|string',
             'franquia' => 'nullable|string',
@@ -39,26 +39,18 @@ class FilmesController extends Controller
             'mcu' => 'nullable|string'
         ]);
 
-        $item = FilmesModel::create($request->only([
-            'codigo',
-            'titulo',
-            'audio',
-            'sinopse',
-            'titulo_original',
-            'data_lancamento',
-            'titulo_alternativo',
-            'filme',
-            'franquia',
-            'genero',
-            'tags',
-            'diretor',
-            'estrelas',
-            'estudio',
-            'mcu'
-        ]));
+        // 🚨 Verificação extra antes de inserir
+        if (FilmesModel::where('codigo', $request->codigo)->exists()) {
+            return response()->json([
+                'message' => 'Erro: Código já cadastrado.'
+            ], 400);
+        }
+
+        $item = FilmesModel::create($request->all());
 
         return response()->json([
-            'message' => 'Filme cadastrado com sucesso!'
+            'message' => 'Filme cadastrado com sucesso!',
+            'data' => $item
         ], 201);
     }
 }
