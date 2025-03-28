@@ -9,3 +9,5 @@ Route::controller(FilmesController::class)->group(function () {
     Route::get('/ultimo', 'Ultimo');
     Route::post('/store', 'store');
 });
+
+
