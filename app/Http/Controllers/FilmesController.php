@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enum\AudioEnum;
 use App\Models\FilmesModel;
+use Duyplus\TMDBApi\TMDB;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
 
@@ -16,7 +17,7 @@ class FilmesController extends Controller
 
     public function create()
     {
-        $tmdb = new tmdb
+        $tmdb = new TMDB($config)
     }
 
     public function Primeiro()
