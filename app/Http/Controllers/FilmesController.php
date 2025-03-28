@@ -20,7 +20,7 @@ class FilmesController extends Controller
         $tmdb = new TMDB();
         $tmdb->setAPIKey('');
 
-        
+        $movie = $tmdb->getMovie(550);
     }
 
     public function Primeiro()
