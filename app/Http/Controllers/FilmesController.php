@@ -9,7 +9,7 @@ use Illuminate\Validation\Rules\Enum;
 use VfacTmdb\Factory;
 use VfacTmdb\Search;
 use VfacTmdb\Item;
-
+use vfalies\tmdb\Item as TmdbItem;
 
 class FilmesController extends Controller
 {
@@ -23,7 +23,7 @@ class FilmesController extends Controller
         $tmdb = Factory::create()->getTmdb('');
         $search = new Search($tmdb);
         $responses = $search->movie('star wars');
-        $item  = new Item($tmdb);
+        $item  = new TmdbItemem($tmdb);
 $infos = $item->getMovie(11, array('language' => 'fr-FR'));
 
 echo $infos->getTitle();
