@@ -26,7 +26,7 @@ class FilmesController extends Controller
     public function Primeiro()
     {
         $filme = FilmesModel::first();
-        return response()->json($filme);
+        
     }
     public function Ultimo()
     {
