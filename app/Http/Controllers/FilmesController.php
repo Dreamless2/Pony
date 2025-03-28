@@ -26,7 +26,7 @@ class FilmesController extends Controller
         $idMovie = 550;
 
         try {
-            $filme = $tmdb->getMovie($idMovie); // Retorna um objeto do tipo Movie
+            $filme = $tmdb->getCollection($idMovie); // Retorna um objeto do tipo Movie
 
             if (!$filme) {
                 return response('Filme não encontrado.', 404);
