@@ -41,10 +41,9 @@ class StoreFilmeRequest extends FormRequest
 
     public function withValidator($validator)
     {
-        $validator->after(function ($validator) {
-            if (FilmesModel::where('codigo', $this->input('codigo'))->exists()) {
-                $validator->errors()->add('codigo', 'Este código já está cadastrado.');
-            }
-        });
+        if (FilmesModel::where('codigo', $this->input('codigo'))->exists()) {
+            $validator->errors()->add('codigo', 'Este código já está cadastrado.');
+        }
+
     }
 }
