@@ -20,7 +20,7 @@ class FilmesController extends Controller
         $tmdb = new TMDB();
         $tmdb->setAPIKey('f04ae616e26fc665d8b08357ce77a1b0');
         $filme = $tmdb->getMovie(550);
-        return response()->json($movie);
+        return response()->json($filme);
     }
 
     public function Primeiro()
