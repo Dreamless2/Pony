@@ -25,6 +25,6 @@ class AppServiceProvider extends ServiceProvider
                 return new \Illuminate\Contracts\Routing\UrlGenerator(function () {
                     return 'https://'.$_SERVER['HTTP_HOST'];
                 });
-           
+            });
     }
 }
