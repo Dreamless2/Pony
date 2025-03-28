@@ -9,6 +9,18 @@ use Illuminate\Validation\Rules\Enum;
 
 class FilmesController extends Controller
 {
+    public function index()
+    {
+        return view('Filmes.index');
+    }
+
+    public function create()
+    {
+        $tmdb = "";
+    }
+
+
+
     public function Primeiro()
     {
         $filme = FilmesModel::first();
