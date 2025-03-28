@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Enum\AudioEnum;
 use App\Models\FilmesModel;
-use Duyplus\TMDBApi\TMDB;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
 
