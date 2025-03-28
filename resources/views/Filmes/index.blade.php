@@ -24,7 +24,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Sinopse</label>
-                    <textarea class="form-control" rows="3" placeholder="Sinopse" value="{{ $filme->get }}"></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Sinopse" value="{{ $filme->getTitle() }}"></textarea>
                 </div>
 
                 <div class="row g-2">
