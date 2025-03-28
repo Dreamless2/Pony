@@ -17,7 +17,8 @@ class FilmesController extends Controller
 
     public function create()
     {
-        $tmdb = new TMDB($config)
+        $tmdb = new TMDB();
+        
     }
 
     public function Primeiro()
