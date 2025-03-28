@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class FilmesModel extends Model, Authenticable implements JWTSubject
+class FilmesModel extends Authenticable implements JWTSubject
 {
     use HasApiTokens, HasFactory, Notifiable;
 
