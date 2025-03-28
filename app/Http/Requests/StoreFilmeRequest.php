@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\FilmesModel;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreFilmeRequest extends FormRequest
@@ -37,11 +38,11 @@ class StoreFilmeRequest extends FormRequest
     }
 
     public function withValidator($validator)
-{
-    $validator->after(function ($validator) {
-        if (FilmesModel::where('codigo', $this->codigo)->exists()) {
-            $validator->errors()->add('codigo', 'Este código já está cadastrado.');
-        }
-    });
-}
+    {
+        $validator->after(function ($validator) {
+            if (FilmesModelodel::where('codigo', $this->codigo)->exists()) {
+                $validator->errors()->add('codigo', 'Este código já está cadastrado.');
+            }
+        });
+    }
 }
