@@ -21,7 +21,9 @@ class FilmesController extends Controller
         $tmdb = Factory::create()->getTmdb('');
         $item  = new Item($tmdb);
         $infos = $item->getMovie(11, array('language' => 'pt-BR'));
-        $infos->getTitle();
+        $title = $infos->getTitle();
+        // return view
+        
     }
 
     public function Primeiro()
