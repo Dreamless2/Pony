@@ -39,7 +39,6 @@ class FilmesController extends Controller
             'mcu' => 'nullable|string'
         ]);
 
-        // 🚨 Verificação extra antes de inserir
         if (FilmesModel::where('codigo', $request->codigo)->exists()) {
             return response()->json([
                 'message' => $request->titulo . ' já está cadastrado.'
