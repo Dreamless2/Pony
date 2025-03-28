@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ecf85b71199fd7c39245c5c00fe7cb7",
+    "content-hash": "ad3e85676298ccbfb627216cd26c4e82",
     "packages": [
         {
             "name": "brick/math",
@@ -442,6 +442,63 @@
                 }
             ],
             "time": "2024-10-09T13:47:03+00:00"
+        },
+        {
+            "name": "duyplus/tmdbapi",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/duyplus/tmdbapi.git",
+                "reference": "b9816402658f5da8fa56e937de9e4baf74082337"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/duyplus/tmdbapi/zipball/b9816402658f5da8fa56e937de9e4baf74082337",
+                "reference": "b9816402658f5da8fa56e937de9e4baf74082337",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.3"
+            },
+            "suggest": {
+                "codeigniter4/framework": "For integration with CodeIgniter 4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Duyplus\\TMDBApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hoang Duy",
+                    "email": "duyplusdz@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "adangq",
+                    "email": "adangq@gmail.com",
+                    "role": "Original Developer"
+                }
+            ],
+            "description": "TMDB API v3 PHP client library, updated for CI4 compatibility",
+            "keywords": [
+                "api",
+                "codeigniter4",
+                "tmdb",
+                "wrapper"
+            ],
+            "support": {
+                "issues": "https://github.com/duyplus/tmdbapi/issues",
+                "source": "https://github.com/duyplus/tmdbapi/tree/1.0"
+            },
+            "time": "2025-03-14T01:14:22+00:00"
         },
         {
             "name": "egulias/email-validator",
