@@ -20,7 +20,7 @@ class FilmesController extends Controller
 
     public function create()
     {
-        $tmdb = Facto
+        $tmdb = Factory::create()
     }
 
 
