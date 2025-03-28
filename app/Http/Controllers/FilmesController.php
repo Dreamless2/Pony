@@ -18,11 +18,11 @@ class FilmesController extends Controller
 
     public function create()
     {
-        $tmdb = Factory::create()->getTmdb('');
+        $tmdb = Factor::create()->getTmdb('');
         $item  = new Item($tmdb);
         $infos = $item->getMovie(11, array('language' => 'pt-BR'));
         $title = $infos->getTitle();
-        
+
     }
 
     public function Primeiro()
