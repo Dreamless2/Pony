@@ -18,7 +18,9 @@ class FilmesController extends Controller
     public function create()
     {
         $tmdb = new TMDB();
-        $tmdb->setAPIKey('')
+        $tmdb->setAPIKey('');
+
+        
     }
 
     public function Primeiro()
