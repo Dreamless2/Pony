@@ -48,7 +48,7 @@
         }
     },
     "config": {
-        "optimize-autoloader": true,
+        "classmap-authoritative": ,
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
