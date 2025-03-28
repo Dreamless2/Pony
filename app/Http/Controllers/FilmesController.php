@@ -6,7 +6,6 @@ use App\Enum\AudioEnum;
 use App\Models\FilmesModel;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
-use Vfact
 
 class FilmesController extends Controller
 {
