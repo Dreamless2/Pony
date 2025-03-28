@@ -23,10 +23,7 @@ class FilmesController extends Controller
         $item  = new Item($tmdb);
         $infos = $item->getMovie(11, array('language' => 'fr-FR'));
         echo $infos->getTitle();
-
     }
-
-
 
     public function Primeiro()
     {
