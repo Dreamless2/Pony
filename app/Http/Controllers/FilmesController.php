@@ -41,23 +41,23 @@ class FilmesController extends Controller
             'mcu' => 'string'
         ]);
 
-        $item = FilmesModel::create([
-            'codigo' => $request->codigo,
-            'titulo' => $request->titulo,
-            'audio' => $request->audio,
-            'sinopse' => $request->sinopse,
-            'titulo_original' => $request->titulo_original,
-            'data_lancamento' => $request->data_lancamento,
-            'titulo_alternativo' => $request->titulo_alternativo,
-            'filme' => $request->filme,
-            'franquia' => $request->franquia,
-            'genero' => $request->genero,
-            'tags' => $request->tags,
-            'diretor' => $request->diretor,
-            'estrelas' => $request->estrelas,
-            'estudio' => $request->estudio,
-            'mcu' => $request->mcu,
-        ]);
+        $item = FilmesModel::create($request->only([
+            'codigo',
+            'titulo',
+            'audio',
+            'sinopse',
+            'titulo_original',
+            'data_lancamento',
+            'titulo_alternativo',
+            'filme',
+            'franquia',
+            'genero',
+            'tags',
+            'diretor',
+            'estrelas',
+            'estudio',
+            'mcu'
+        ]));
 
         return response()->json([
             'message' => 'Filme cadastrado com sucesso!',
