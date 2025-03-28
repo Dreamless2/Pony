@@ -27,7 +27,7 @@ class StoreFilmeRequest extends FormRequest
         return [
             'codigo' => 'required|numeric',
             'titulo' => 'required|string',
-            'audio' => ['required', new Enumm(AudioEnumum::class)],
+            'audio' => ['required', new Enum(AudioEnum::class)],
             'sinopse' => 'required|string',
             'data_lancamento' => 'required|date_format:d/m/Y',
             'genero' => 'required|string',
