@@ -18,8 +18,7 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Título</label>
-                        <input type="text" class="form-control" placeholder="Título" value=
-                        '{{ $filme['original_title'] }}>
+                        <input type="text" class="form-control" placeholder="Título" value="{{ $filme['original_title'] }}">
                     </div>
                 </div>
 
