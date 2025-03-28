@@ -30,7 +30,7 @@
                 <div class="row g-2">
                     <div class="col-md-6">
                         <label class="form-label">Título Original</label>
-                        <input type="text" class="form-control" placeholder="Título Original">
+                        <input type="text" class="form-control" placeholder="Título Original" value="{{ $filme->getTitleOriginal() }}">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Título Alternativo</label>
