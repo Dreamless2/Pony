@@ -23,8 +23,9 @@ class AppServiceProvider extends ServiceProvider
         if (app()->environment('production')) {
             $this->app->bind('url', function () {
                 return new \Illuminate\Contracts\Routing\UrlGenerator(function () {
-                    return 'https://'.$_SERVER['HTTP_HOST'];
+                    return 'https://' . $_SERVER['HTTP_HOST'];
                 });
             });
+        }
     }
 }
