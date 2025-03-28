@@ -20,7 +20,7 @@ class FilmesController extends Controller
     {
         $tmdb = Factory::create()->getTmdb('');
         $item  = new Item($tmdb);
-        $infos = $item->getMovie(11, array('language' => 'fr-FR'));
+        $infos = $item->getMovie(11, array('language' => 'pt-BR'));
         echo $infos->getTitle();
     }
 
