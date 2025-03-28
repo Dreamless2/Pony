@@ -6,10 +6,7 @@ use App\Enum\AudioEnum;
 use App\Models\FilmesModel;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
-use VfacTmdb\Factory;
-use VfacTmdb\Search;
-use VfacTmdb\Item;
-use vfalies\tmdb\Item as TmdbItem;
+
 
 class FilmesController extends Controller
 {
@@ -23,7 +20,7 @@ class FilmesController extends Controller
         $tmdb = Factory::create()->getTmdb('');
         $search = new Search($tmdb);
         $responses = $search->movie('star wars');
-        $item  = new TmdbItemem($tmdb);
+        $item  = new Item($tmdb);
 $infos = $item->getMovie(11, array('language' => 'fr-FR'));
 
 echo $infos->getTitle();
