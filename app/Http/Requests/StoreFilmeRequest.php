@@ -21,8 +21,31 @@ class StoreFilmeRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
-        ];
+        public function rules()
+        {
+            return [
+                'codigo' => 'required|numeric',
+                'titulo' => 'required|string',
+                'audio' => ['required', new Enum(AudioEnum::class)],
+                'sinopse' => 'required|string',
+                'data_lancamento' => 'required|date_format:d/m/Y',
+                'genero' => 'required|string',
+                'tags' => 'required|string',
+                'diretor' => 'required|string',
+                'estrelas' => 'required|string',
+                'estudio' => 'required|string',
+                'mcu' => 'nullable|string'
+            ];
+        }
+
+        public function withValidator($validator)
+        {
+            $validator->after(function ($validator) {
+                if (FilmesModel::where('codigo', $this->codigo)->exists()) {
+                    $validator->errors()->add('codigo', 'Este código já está cadastrado.');
+                }
+            });
+        }
+
     }
 }
