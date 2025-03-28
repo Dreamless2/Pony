@@ -21,6 +21,7 @@ class FilmesController extends Controller
     public function create()
     {
         $tmdb = Factory::create()->getTmdb('');
+        $search = new Search($tmdb);
         
     }
 
