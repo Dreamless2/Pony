@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
 use vfalies\tmdb\Item;
 
-
 class FilmesController extends Controller
 {
     public function index()
