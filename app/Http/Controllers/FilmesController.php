@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Enum\AudioEnum;
 use App\Models\FilmesModel;
 use Duyplus\TMDBApi\TMDB;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
 
@@ -25,7 +26,7 @@ class FilmesController extends Controller
             if (!$filme) {
                 return response('Filme não encontrado.', 404);
             }
-            return view('Filmes.index', ['filme' => $filme]);
+            return View
         } catch (\Exception $e) {
             return response('Erro ao buscar filme.', 500);
         }
