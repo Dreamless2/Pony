@@ -8,8 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class FilmesModel extends Authenticatable implements JWTSubject
-{
+class FilmesModel extends Model
     use HasApiTokens, HasFactory, Notifiable;
 
     public function getJWTIdentifier()
