@@ -21,9 +21,9 @@ class FilmesController extends Controller
         $search = new Search($tmdb);
         $responses = $search->movie('star wars');
         $item  = new Item($tmdb);
-$infos = $item->getMovie(11, array('language' => 'fr-FR'));
+        $infos = $item->getMovie(11, array('language' => 'fr-FR'));
+        echo $infos->getTitle();
 
-echo $infos->getTitle();
     }
 
 
