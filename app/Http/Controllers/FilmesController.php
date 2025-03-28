@@ -6,8 +6,6 @@ use App\Enum\AudioEnum;
 use App\Models\FilmesModel;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
-use vfalies\tmdb\Item;
-use VfacTmdb\Factory;
 
 class FilmesController extends Controller
 {
@@ -18,11 +16,7 @@ class FilmesController extends Controller
 
     public function create()
     {
-        $tmdb = Factory::create()->getTmdb('');
-        $item  = new Item($tmdb);
-        $infos = $item->getMovie(11, array('language' => 'pt-BR'));
-        $title = $infos->getTitle();
-
+        
     }
 
     public function Primeiro()
