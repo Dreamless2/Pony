@@ -10,18 +10,6 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class FilmesModel extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
-    public function getJWTIdentifier()
-    {
-        return $this->getKey();
-    }
-
-    public function getJWTCustomClaims()
-    {
-        return [];
-    }
-
     protected $table = 'filmes';
     protected $primaryKey = 'id';
     protected $hidden = ['created_at', 'updated_at'];
