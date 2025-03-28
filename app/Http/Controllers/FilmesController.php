@@ -30,7 +30,7 @@ class FilmesController extends Controller
             'sinopse' => 'required|string',
             'titulo_original' => 'required|string',
             'data_lancamento' => 'required|string',
-            'titulo_alternativo' => 'string',
+            'titulo_alternativo' => 'nullable|string',
             'filme' => 'required|string',
             'franquia' => 'nullable|string',
             'genero' => 'required|string',
