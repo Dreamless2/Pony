@@ -42,7 +42,7 @@ class FilmesController extends Controller
         // 🚨 Verificação extra antes de inserir
         if (FilmesModel::where('codigo', $request->codigo)->exists()) {
             return response()->json([
-                'message' => $request->titulo . ' já cadastrado.'
+                'message' => $request->titulo . ' já está cadastrado.'
             ], 400);
         }
 
