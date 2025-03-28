@@ -26,7 +26,7 @@ class FilmesController extends Controller
     public function Primeiro()
     {
         $filme = FilmesModel::first();
-        compact('filme');
+        return view('Filmes.Primeiro', compact('filme'));
     }
     public function Ultimo()
     {
