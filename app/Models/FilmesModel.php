@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class FilmesModel extends Model 
+class FilmesModel extends Model, 
 {
     use HasApiTokens, HasFactory, Notifiable;
 
