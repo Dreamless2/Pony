@@ -21,7 +21,7 @@ class FilmesController extends Controller
         $tmdb = new TMDB();
         $tmdb->setAPIKey(env('TMDB_API_KEY'));
         $tmdb->getLang("pt-BR");
-        
+        $tmdb->
 
         $idMovie = 11;
 
