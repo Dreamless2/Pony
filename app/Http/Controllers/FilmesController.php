@@ -22,7 +22,8 @@ class FilmesController extends Controller
     {
         $tmdb = Factory::create()->getTmdb('');
         $search = new Search($tmdb);
-        $responses = $search->movie()
+        $responses = $search->movie('star wars');
+        
     }
 
 
