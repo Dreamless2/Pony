@@ -4,7 +4,7 @@ use App\Http\Controllers\FilmesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware()
+Route::middleware('auth')
 
 Route::post('/inserir', [FilmesController::class, 'store']);
 Route::get('/primeiro', [FilmesController::class, 'Primeiro'])->name('primeiro');
