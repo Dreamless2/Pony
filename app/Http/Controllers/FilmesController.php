@@ -19,8 +19,16 @@ class FilmesController extends Controller
     {
         $tmdb = new TMDB();
         $tmdb->setAPIKey('f04ae616e26fc665d8b08357ce77a1b0');
-        $filme = $tmdb->getMovie(550);
-        return view('Filmes.index', compact('filme'));
+
+        try {
+            $filme = $tmdb->getMovie(550);
+            if (!$filme) {
+                return response('Filme não encontrado.', 404);
+            }
+            return view('Filmes.index', compact('filme'));
+        } catch (\Exception $e) {
+            return response('Erro ao buscar filme.', 500);
+        }
     }
 
     public function Primeiro()
