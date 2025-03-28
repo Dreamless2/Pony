@@ -38,7 +38,7 @@ class FilmesController extends Controller
             'diretor' => 'required|string',
             'estrelas' => 'required|string',
             'estudio' => 'required|string',
-            'mcu' => 'string|nullable'
+            'mcu' => 'string'
         ]);
 
         $item = FilmesModel::create($request->only([
