@@ -41,7 +41,7 @@ class FilmesController extends Controller
             'mcu' => 'string'
         ]);
 
-        $item = FilmesModel::create($request->onl[
+        $item = FilmesModel::create($request->only[
             'codigo' => $request->codigo,
             'titulo' => $request->titulo,
             'audio' => $request->audio,
