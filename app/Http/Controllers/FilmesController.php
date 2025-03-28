@@ -25,7 +25,7 @@ class FilmesController extends Controller
             if (!$filme) {
                 return response('Filme não encontrado.', 404);
             }
-            return view('Filmes.index', compact('filme'));
+            return view('Filmes.index', []);
         } catch (\Exception $e) {
             return response('Erro ao buscar filme.', 500);
         }
