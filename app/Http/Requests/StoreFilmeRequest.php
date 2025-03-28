@@ -44,6 +44,5 @@ class StoreFilmeRequest extends FormRequest
         if (FilmesModel::where('codigo', $this->input('codigo'))->exists()) {
             $validator->errors()->add('codigo', 'Este código já está cadastrado.');
         }
-
     }
 }
