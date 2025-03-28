@@ -35,4 +35,12 @@ class StoreFilmeRequest extends FormRequest
             'mcu' => 'nullable|string'
         ];
     }
+
+    public function withValidator($validator)
+{
+    $validator->after(function ($validator) {
+        if (FilmesModel::where('codigo', $this->codigo)->exists()) {
+            $validator->errors()->add('codigo', 'Este código já está cadastrado.');
+        }
+    });
 }
