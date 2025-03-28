@@ -32,13 +32,13 @@ class FilmesController extends Controller
             'data_lancamento' => 'required|string',
             'titulo_alternativo' => 'string',
             'filme' => 'required|string',
-            'franquia' => 'string',
+            'franquia' => 'nullable|string',
             'genero' => 'required|string',
             'tags' => 'required|string',
             'diretor' => 'required|string',
             'estrelas' => 'required|string',
             'estudio' => 'required|string',
-            'mcu' => 'string'
+            'mcu' => 'nullabe|string'
         ]);
 
         $item = FilmesModel::create($request->only([
