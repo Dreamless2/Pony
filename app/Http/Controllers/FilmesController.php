@@ -16,29 +16,6 @@ class FilmesController extends Controller
         return view('Filmes.index');
     }
 
-    public function ObterFilme()
-    {
-        $tmdb = new TMDB();
-        $tmdb->setAPIKey(env('TMDB_API_KEY'));
-        $tmdb->setLang("pt-BR");
-        $tmdb->setTimeZone("America/Sao_Paulo");
-
-        $idMovie = 550;
-
-        try {
-            $filme = $tmdb->getCollection($idMovie); // Retorna um objeto do tipo Movie
-
-            if (!$filme) {
-                return response('Filme não encontrado.', 404);
-            }
-
-            // Passando o objeto completo para a view
-            return view('Filmes.index', ['filme' => $filme]);
-
-        } catch (\Exception $e) {
-            return response('Erro ao buscar filme.', 500);
-        }
-    }
 
     public function Primeiro()
     {
