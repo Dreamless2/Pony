@@ -62,6 +62,6 @@ class FilmesController extends Controller
         return response()->json([
             'message' => 'Filme cadastrado com sucesso!',
             'data' => $item
-        ], 201); // Status 201 para criação bem-sucedida
+        ], 201); 
     }
 }
