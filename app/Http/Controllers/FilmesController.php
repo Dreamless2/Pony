@@ -49,8 +49,7 @@ class FilmesController extends Controller
         $item = FilmesModel::create($request->all());
 
         return response()->json([
-            'message' => 'Filme cadastrado com sucesso!',
-            'data' => $item
+            'message' => 'Filme cadastrado com sucesso!'
         ], 201);
     }
 }
