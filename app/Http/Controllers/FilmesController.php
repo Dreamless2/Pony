@@ -18,7 +18,7 @@ class FilmesController extends Controller
     public function ObterFilme()
     {
         $tmdb = new TMDB();
-        $tmdb->setAPIKey(env()');
+        $tmdb->setAPIKey(env('TMDB_API_KEY'));
 
         try {
             $filme = $tmdb->getMovie(550);
