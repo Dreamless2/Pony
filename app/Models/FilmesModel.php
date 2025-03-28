@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 class FilmesModel extends Model
 {
-    use HasApiTokens
+    use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'filmes';
     protected $primaryKey = 'id';
     protected $hidden = ['created_at', 'updated_at'];
