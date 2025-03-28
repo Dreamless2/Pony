@@ -28,7 +28,6 @@ class FilmesController extends Controller
         $filme = FilmesModel::first();
         return response()->json($filme);
     }
-    }
     public function Ultimo()
     {
         $filme = FilmesModel::latest()->first();
