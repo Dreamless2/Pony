@@ -7,7 +7,7 @@ use App\Models\FilmesModel;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Enum;
 use vfalies\tmdb\Item;
-use vfalies\
+use vfalies\tmdb\Search
 
 class FilmesController extends Controller
 {
