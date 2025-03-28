@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class FilmesModel extends Model
 {
-    Laravel\Sanctum\HasApiTokens
+    
     protected $table = 'filmes';
     protected $primaryKey = 'id';
     protected $hidden = ['created_at', 'updated_at'];
