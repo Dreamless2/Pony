@@ -12,6 +12,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/filmes', 'store');
         Route::put('/filmes/{id}', 'update');
         Route::delete('/filmes/{id}', 'destroy');
-    }
+    });
+});
 });
 
