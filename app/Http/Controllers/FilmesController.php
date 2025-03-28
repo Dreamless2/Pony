@@ -17,7 +17,7 @@ class FilmesController extends Controller
 
     public function create()
     {
-        $tmdb = Factor::create()->getTmdb('');
+        $tmdb = Factory::create()->getTmdb('');
         $item  = new Item($tmdb);
         $infos = $item->getMovie(11, array('language' => 'pt-BR'));
         $title = $infos->getTitle();
