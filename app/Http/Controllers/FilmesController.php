@@ -26,7 +26,7 @@ class FilmesController extends Controller
             if (!$filme) {
                 return response('Filme não encontrado.', 404);
             }
-            return View
+            return View::make('Filmes.obterfilme', ['filme' => $filme]);
         } catch (\Exception $e) {
             return response('Erro ao buscar filme.', 500);
         }
