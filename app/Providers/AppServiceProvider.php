@@ -19,13 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // force https production
-        if (app()->environment('production')) {
-            $this->app->bind('url', function () {
-                return new \Illuminate\Contracts\Routing\UrlGenerator(function () {
-                    return 'https://' . $_SERVER['HTTP_HOST'];
-                });
-            });
-        }
+        // force https development, production
+        
+
     }
 }
