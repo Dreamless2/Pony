@@ -22,7 +22,6 @@ class FilmesController extends Controller
         $item  = new Item($tmdb);
         $infos = $item->getMovie(11, array('language' => 'pt-BR'));
         $title = $infos->getTitle();
-        // return view
         
     }
 
