@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Sanctum\HasApiTokens;
 
 class FilmesModel extends Model
 {
-    
+    use HasApiTokens
     protected $table = 'filmes';
     protected $primaryKey = 'id';
     protected $hidden = ['created_at', 'updated_at'];
